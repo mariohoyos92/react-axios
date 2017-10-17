@@ -9,7 +9,7 @@ export default class RemoveCustomer extends Component {
     };
 
     this.toggle = this.toggle.bind( this );
-    this.remove = this.remove.bind( this );
+    // this.remove = this.remove.bind( this );
   }
 
   toggle() {
@@ -26,7 +26,7 @@ export default class RemoveCustomer extends Component {
           ?
             <div id="RemoveCustomer__confirmationContainer">
               <button id="RemoveCustomer__cancelBtn" onClick={ this.toggle }> Cancel </button>
-              <button className="RemoveCustomer__removeBtn" onClick={ '' }> Confirm </button>
+              <button className="RemoveCustomer__removeBtn" onClick={ this.props.removeCustomer(this.props.id)}> Confirm </button>
             </div>
           :
             null
